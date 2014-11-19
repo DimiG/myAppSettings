@@ -10,11 +10,11 @@ Codes description
 
 ### myAppSettings folder
 
-* `Emacs`: These settings are tested by [Cygwin][cygwin] on Windows 7 platform in command line mode (no GUI).<br>
+* `Emacs`: These settings are tested by [Cygwin][cygwin] on Windows 7 platform in command line mode (CLI).<br>
    They are specific for [Python][python] programming and used for own entertainment.<br>
    GNU [Emacs][emacs] is old enough editor with strong power.<br>
    Because of Emacs is using the [Lisp][lisp] programming language, the settings may look complicated.
-   ***Requires :*** Any Linux/UNIX based platform, [Emacs][emacs], Auto Complete, [Python Mode][pythonmode] plugin.<br>
+   ***Requires :*** Any Linux/UNIX based platform, [Emacs][emacs], [Auto Complete][autocomplete], [Python Mode][pythonmode] plugin.<br>
    **Note :** The settings located in `~/.emacs.d/settings` and separated by sense. The main config file is `.emacs` located in the home directory.<br>
    The plugins version **MUST** be changed according your real version in your setting files.<br>
    The settings are RAW, so may work incorrectly. Any tips are **WELCOME**.<br>
