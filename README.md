@@ -17,7 +17,11 @@ Codes description
    ***Requires :*** Any Linux/UNIX based platform, [Emacs][emacs], [Auto Complete][autocomplete], [Python Mode][pythonmode] plugin.<br>
    **Note :** The settings located in `~/.emacs.d/settings` and separated by sense. The main config file is `.emacs` located in the home directory.<br>
    The plugins version **MUST** be changed according your real version in your setting files.<br>
-   The settings are RAW, so may work incorrectly. Any tips are **WELCOME**.<br>
+   The settings are RAW, so may work incorrectly. Any tips are **WELCOME**.
+
+* `HandmadeHero`: These settings are from [HandmadeHero][handmadehero] project by Casey Muratori.<br>
+   Casey using the Emacs for programming. So, these settings are very convenient for his style of programming.<br>
+   ***Requires :*** [Emacs][emacsdl].
 
 * `All Applications`:<br>
    ***Requires :*** Windows, Linux or Mac OS platform<br>
@@ -35,7 +39,7 @@ Exist some reasons for it:
 * I don't like to make one job many times and want to save it in the cloud.
 
 * If someone have same needs he can contribute and improve this code.
-  
+
 * I want to use the `Git` for personal study and project collaboration
 
 ### When do you finish?
@@ -68,3 +72,5 @@ send a Pull Request.
 [lisp]:https://en.wikipedia.org/wiki/Lisp_%28programming_language%29
 [autocomplete]:http://www.emacswiki.org/emacs/AutoComplete
 [pythonmode]:https://launchpad.net/python-mode
+[handmadehero]:https://handmadehero.org
+[emacsdl]:http://mirror.tochlab.net/pub/gnu/emacs/windows/
