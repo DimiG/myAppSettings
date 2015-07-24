@@ -24,6 +24,9 @@
 ;; Disable auto save
 (setq auto-save-default nil)
 
+;; No lock files
+(setq create-lockfiles nil)
+
 ;; Number of characters until the fill column
 (setq-default fill-column 70)
 
@@ -59,7 +62,17 @@
 
 ;; GitHub Flavored Markdown
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 
+;; Default window width and height (uncomment it if necessary)
+(defun custom-set-frame-size ()
+  (add-to-list 'default-frame-alist '(height . 40))
+  (add-to-list 'default-frame-alist '(width . 150)))
+(custom-set-frame-size)
+(add-hook 'before-make-frame-hook 'custom-set-frame-size)
+
+;; Hot key for Visual Line Mode
+(global-set-key [f7] 'visual-line-mode)
 
 ;; ************************************************************************
 ;;     ReMap my KEYs below
@@ -79,7 +92,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; Neo TREE
-(define-key global-map (kbd "<f12>") 'neotree)
+(global-set-key [f12] 'neotree-toggle)
 
 ; Setup my find-files
 (define-key global-map "\ef" 'find-file)
@@ -159,8 +172,8 @@
 
 (put 'erase-buffer 'disabled nil)
 
-(add-to-list 'default-frame-alist '(font . "Liberation Mono-11.5"))
-(set-face-attribute 'default t :font "Liberation Mono-11.5")
+(add-to-list 'default-frame-alist '(font . "Liberation Mono-12.5"))
+(set-face-attribute 'default t :font "Liberation Mono-12.5")
 ;; Playing with colors
 ;; (set-face-attribute 'font-lock-builtin-face nil :foreground "#DAB98F")
 (set-face-attribute 'font-lock-builtin-face nil :foreground "#af8700")

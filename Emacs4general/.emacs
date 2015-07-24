@@ -45,6 +45,10 @@
 (require 'magit)
 (setq magit-last-seen-setup-instructions "1.4.0")
 
+;; Aspell
+(setq ispell-program-name "aspell"
+	  ispell-extra-args '("--sug-mode=ultra"))
+
 ;; ************************************************************************ ;;
 ;;                                 Modes                                    ;;
 ;; ************************************************************************ ;;
@@ -60,11 +64,22 @@
 ;; cc-mode
 (require 'cc-mode)
 
+;; zone-mode (screensaver)
+;; (require 'zone)
+;; (zone-when-idle 3600)
+;; (setq zone-programs [zone-pgm-jitter])
+
 ;; compile
 (require 'compile)
 
 ;; C mode base map
 (define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
+
+;; Markdown Mode
+(autoload 'markdown-mode "markdown-mode"
+  "Major mode for editing Markdown files" t)
+
+(add-hook 'markdown-mode-hook 'turn-on-flyspell)
 
 ;; ************************************************************************
 ;; Put auto 'custom' changes in a separate file (this is stuff like
