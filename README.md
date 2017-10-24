@@ -31,6 +31,7 @@ Codes description
 
 * `Docker`: [Docker][docker] is a software technology providing containers, promoted by the company [Docker][docker], Inc. Docker provides an additional layer of abstraction and automation of operating-system-level virtualization on Windows and [Linux][linux]. Docker uses the resource isolation features of the Linux kernel such as *cgroups* and kernel *namespaces*, and a union-capable file system such as *OverlayFS* and others to allow independent "containers" to run within a single Linux instance, avoiding the overhead of starting and maintaining virtual machines (VMs). The sub-folders here are divided by image names and combine Docker files for custom image creation and additional scripts.<br>
    `Nginx`: Custom image creation for [Nginx][nginx] WEB server.<br>
+   `bash_aliases_and_funcs.txt`: The *Docker* has too long command line commands. To simplify your life you can use the aliases and functions from this file on your system.<br>
    ***Requires :*** [Linux][linux] and [Docker][docker] installed.
 
 * `All Applications`:<br>

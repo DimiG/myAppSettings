@@ -1,0 +1,66 @@
+# Custom aliases for BASH SHELL
+
+###########################
+# Docker specific aliases #
+###########################
+
+# Get latest container ID
+alias dl="docker ps -l -q"
+
+# Get container process
+alias dps="docker ps"
+
+# Get process included stop container
+alias dpa="docker ps -a"
+
+# Get images
+alias di="docker images"
+
+# Stop and Remove all containers
+alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
+
+# Get container IP
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+
+# Run deamonized container, e.g., $dkd base /bin/echo hello
+#alias dkd="docker run -d -P"
+
+# Run interactive container, e.g., $dki base /bin/bash
+#alias dki='docker run -i -t -P'
+
+# Execute interactive container, e.g., $dex base /bin/bash
+alias dex="docker exec -i -t"
+
+# Custom Functions for BASH SHELL
+
+#############################
+# Docker specific functions #
+#############################
+
+# Stop all containers
+dstop() { docker stop $(docker ps -a -q); }
+
+# Start all containers
+dstart() { docker start $(docker ps -a -q); }
+
+# Remove all containers
+drm() { docker rm $(docker ps -a -q); }
+
+# Remove all images
+dri() { docker rmi $(docker images -q); }
+
+# Dockerfile build, e.g., $dbu syslog/test
+dbu() { docker build -t=$1 .; }
+
+# Run deamonized container, e.g., $dkd base
+dkd() { docker run --name $1 -d -P $1; }
+
+# # Run interactive container, e.g., $dki base /bin/bash
+dki() { docker run --name $1 -i -t -P $1 $2; }
+
+# Bash into running container
+dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
+
+# Show all aliases related docker
+daliases() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
+
