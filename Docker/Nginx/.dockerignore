@@ -1,8 +1,0 @@
-# This is an ignore file for docker
-
-*.sh
-*.md
-
-.dockerignore
-Dockerfile
-
